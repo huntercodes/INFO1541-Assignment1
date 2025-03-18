@@ -72,13 +72,16 @@ public final class HourlyEmployee extends Employee {
     @Override
     public double calculateWeeklyPay()
     {
-        double pay = wage * hoursWorked;
-        if (hoursWorked > 40)
-        {
-            pay = wage * 40 + (wage*1.25) * (hoursWorked-40);
+        // had to change, test failed without
+        double pay;
+        if (hoursWorked > 40) {
+            // Calculate regular pay plus overtime at 1.5 times the wage.
+            pay = wage * 40 + (wage * 1.5) * (hoursWorked - 40);
+        } else {
+            pay = wage * hoursWorked;
         }
-        
-        return pay;
+        // Round to two decimal places
+        return Math.round(pay * 100.0) / 100.0;
     }
 
     /**
