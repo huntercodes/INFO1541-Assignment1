@@ -72,7 +72,7 @@ public final class HourlyEmployee extends Employee {
     @Override
     public double calculateWeeklyPay()
     {
-        // had to change, test failed without
+        // had to change, test failed without this change
         double pay;
         if (hoursWorked > 40) {
             // Calculate regular pay plus overtime at 1.5 times the wage.
