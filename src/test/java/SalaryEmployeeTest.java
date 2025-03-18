@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 import EmployeeObjects.SalaryEmployee;
 
+// salary tests
 public class SalaryEmployeeTest {
     private SalaryEmployee emp;
 
