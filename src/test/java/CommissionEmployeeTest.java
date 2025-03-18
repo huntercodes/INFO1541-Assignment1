@@ -3,6 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 import EmployeeObjects.CommissionEmployee;
 
+// commission tests
 public class CommissionEmployeeTest {
     private CommissionEmployee emp;
 
