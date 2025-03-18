@@ -9,7 +9,9 @@ import EmployeeBlueprints.EmployeeType;
  * @version 1.0.1
  */
 
+@EmployeeObjects.EmployeeType(type="Hourly")
 public final class HourlyEmployee extends Employee {
+    @PayRate(type="Hourly")
     private double wage;
     private double hoursWorked;
 
@@ -70,6 +72,7 @@ public final class HourlyEmployee extends Employee {
      * @return a double for the weekly pay
      */
     @Override
+    @WeeklyPayCalculator
     public double calculateWeeklyPay()
     {
         // had to change, test failed without this change
